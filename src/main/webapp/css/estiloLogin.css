@@ -1,0 +1,125 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: calibri, sans serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 70px;
+	color: gray;
+	font-size: 32px;
+	font-weight: normal;
+}
+
+.contenedorGeneral {
+	position: absolute;
+	width: 550px;
+	margin: 10px;
+	padding: 50px;
+}
+
+contenedorDatos {
+	display: flex;
+	width: 450px;
+	margin: auto;
+	padding-right: 60px;
+}
+
+.contenedorDatos div {
+	width: 70%;
+	margin: auto;
+	display: flex;
+}
+
+.contenedorDatos label {
+	display: block;
+	margin-top: 30px;
+	margin-right: 20px;
+	font-size: 20px;
+	text-align: right;
+	color: gray;
+}
+
+.contenedorDatos input {
+	display: block;
+	margin-top: 30px;
+	width: 50%;
+	font-size: 20px;
+}
+
+.contenedorBotones {
+	cursor: pointer;
+	margin: auto;
+	width: 450px;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+.contenedorBotones input {
+	width: 150px;
+	height: 40px;
+	font-family: calibri;
+	font-size: 20px;
+	color: white;
+	background-color: #8080ff;
+	border-radius: 5px;
+	margin: 55px 10px 0 10px;
+	border: none;
+}
+
+.contenedorBotones input:hover {
+	background-color: #ffffff;
+	color: #8080ff;
+}
+
+
+hr{
+    margin: 10px;
+}
+
+
+
+.show-img {
+    width: 60%;
+    height: 580px;
+    background: url('../img/computador.jpg') no-repeat center center/cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+}
+
+.btn-img{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+}
+.btn-img:hover{
+    opacity: .5;
+}
+.show-img h2,
+.show-img p{
+	color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
