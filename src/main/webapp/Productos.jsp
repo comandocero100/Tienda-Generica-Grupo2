@@ -6,6 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Productos</title>
 <link rel="stylesheet" href="css/estiloOpciones.css">
+
+
 </head>
 <body>
 
@@ -32,7 +34,8 @@
 			<h3>Productos</h3>
 		</div>
         <div class="contenedorIN">
-        	<div><label>Nombre del Archivo </label><input type="file" value="Examinar" name="archivo"></div>                               
+        	<div><label>Buscar archivo: </label><hr>
+        	<input type="file" value="Examinar" name="archivo" accept=".txt"></div>                               
         </div>
         <div class="contenedorBotones">              	
         	<div><input type="submit" value="Cargar" name="cargar"></div>           	

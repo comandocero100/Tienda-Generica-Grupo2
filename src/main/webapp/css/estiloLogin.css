@@ -70,16 +70,16 @@ contenedorDatos {
 	height: 40px;
 	font-family: calibri;
 	font-size: 20px;
-	color: white;
-	background-color: #8080ff;
+	color: #ffffff;
+	background-color: #212369;
 	border-radius: 5px;
 	margin: 55px 10px 0 10px;
 	border: none;
 }
 
 .contenedorBotones input:hover {
-	background-color: #ffffff;
-	color: #8080ff;
+	background-color: #3437a5;
+	color: #d8d8d8;
 }
 
 
@@ -98,7 +98,7 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
 }
 

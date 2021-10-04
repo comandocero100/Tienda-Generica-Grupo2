@@ -18,15 +18,25 @@ body {
 }
 
 .titulo {
-	background-color: gray;
+	
+	padding: 0.5% 0;
+	text-align:center;
+	background-color: #101132;
 	color: white;
 }
+
+.titulo-usuario {
+	text-align:right;
+	background-color: #101132;
+	color: #ffffff;
+}
+
 
 
 h1 {
 	width: 1000px;
 	margin: auto;
-	font-size: 22px;
+	font-size: 40px;
 	font-weight: normal;
 	padding: 20px 0px 10px 0px;
 }
@@ -54,14 +64,22 @@ nav ul li {
 nav ul li a {
 	text-decoration: none;
 	font-size: 20px;
-	color: gray;
+	color: #626262;
 }
 
 nav ul li a:hover {
-	background-color: gray;
+	background-color: #101132;
 	color: white;
 	padding: 10px 0 10px 0;
 	transition: ease-in-out 0.2s;
+}
+
+.contenedor-report{
+	display: flex;
+	justify-content: space-between;
+	width: 850px;
+	margin: 50px auto 0 auto;
+	
 }
 
 .contenedor-fluid {
@@ -78,7 +96,7 @@ nav ul li a:hover {
 
 .contenedorIN label {
 	display: block;
-	color: gray;
+	color: #000000;
 	font-size: 20px;
 	margin-bottom: 15px;
 }
@@ -91,6 +109,7 @@ nav ul li a:hover {
 }
 
 .contenedorBotones {
+	
 	margin: auto;
 	width: 850px;
 	display: flex;
@@ -98,11 +117,12 @@ nav ul li a:hover {
 }
 
 .contenedorBotones input {
+	cursor:pointer; 
 	width: 150px;
 	height: 40px;
 	font-family: calibri;
 	font-size: 20px;
-	background-color: darkgray;
+	background-color: #212369;
 	color: white;
 	border-radius: 5px;
 	margin: 40px 10px 0 10px;
@@ -110,6 +130,7 @@ nav ul li a:hover {
 }
 
 .contenedorBotones input:hover {
-	background-color: rgb(149, 149, 149);
-	color: rgb(100, 100, 100);
+	cursor:pointer; 
+	background-color: #383cb4;
+	color: #c0c0c0;
 }

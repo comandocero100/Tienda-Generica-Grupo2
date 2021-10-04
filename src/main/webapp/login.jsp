@@ -36,7 +36,7 @@
 		<h2>PRODUCTOS NOVEDOSOS</h2>
 		<p>AL ALCANCE DE TU MANO</p>
 
-		<a href="#" class="btn-img">MAS PRODUCTOS<i
+		<a href="index.jsp" class="btn-img">MAS PRODUCTOS<i
 			class="fas fa-angle-double-right"></i></a>
 	</form>
 

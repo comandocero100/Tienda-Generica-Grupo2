@@ -45,9 +45,10 @@ if (request.getParameter("cedula") != null) {
 </header>
 
 <div class="contendor-fluid">
+
 	<form action="Usuarios" method="post">
-		<div class="titulo">
-			<h3>Usuarios</h3>
+		<div class="titulo-usuario">
+			<h3>Usuario:</h3>
 		</div>
 		<div class="contenedorIN">
 			<div>
@@ -56,7 +57,7 @@ if (request.getParameter("cedula") != null) {
 				<label for="">Correo Electrónico</label>
 			</div>
 			<div>
-				<input type="text" name="cedula" value="<%=cedula%>" <%=estado%> required>
+				<input type="text" name="cedula" size="12" value="<%=cedula%>" <%=estado%> required>
 				<input type="hidden" name="ced" value="<%=cedula%>"> 
 				<input type="text" name="nombre" value="<%=nombre%>"> 
 				<input type="email" name="email" value="<%=email%>">
@@ -79,7 +80,10 @@ if (request.getParameter("cedula") != null) {
 		</div>
 	</form>
 </div>
-	
+<footer class="footer">
+
+
+</footer>
 <%
 if (request.getParameter("men") != null) {
 	String mensaje = request.getParameter("men");
