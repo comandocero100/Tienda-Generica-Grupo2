@@ -1,31 +1,30 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>CLIENTES PRUEBA</title>
+<title>Proveedores</title>
 <link rel="stylesheet" href="css/estiloOpciones.css">
 </head>
 <body>
-<%!String cedula = "", nombre = "", direccion = "", telefono = "", email = "", estado = "";%>
+<%!String nit = "", ciudad = "", direccion = "", nombre = "",  telefono = "",  estado = "";%>
 
 <%
-if (request.getParameter("cedula") != null) {
-	cedula = request.getParameter("cedula");
-	direccion = request.getParameter("direccion");
-	email = request.getParameter("email");
+if (request.getParameter("nit") != null) {
+	nit = request.getParameter("nit");
+	ciudad = request.getParameter("ciudad");
+	direccion = request.getParameter("direccion");		
 	nombre = request.getParameter("nombre");		
 	telefono = request.getParameter("tel");		
 	estado = "disabled";
 }
-%>	
-	
+%>
+
 <div class="titulo">
 	<h1>Tienda Genérica</h1>
 </div>
-<header class="contenedor-menu">
+<header>
 	<nav>
 		<ul>
 			<li><a href="Usuarios.jsp">Usuarios</a></li>
@@ -40,40 +39,40 @@ if (request.getParameter("cedula") != null) {
 </header>	
 	
 <div class="contendor-fluid">
-	<form action="Clientes" method="post">
-    	<div class="titulo">
-			<h3>Clientes</h3>
+	<form action="Proveedores" method="post">
+		<div class="titulo">
+			<h3>Proveedores</h3>
 		</div>
         <div class="contenedorIN">
-        	<div>
-            	<label for="">Cédula</label>
-                <label for="">Nombre Completo</label>
-                <label for="">Dirección</label>
-            </div>
-            <div>
-                <input type="text" name="cedula" value="<%=cedula%>" <%=estado%>>
-                <input type="hidden" name="ced" value="<%=cedula%>">
-                <input type="text" name="nombre" value="<%=nombre%>">
-            	<input type="text" name="direccion" value="<%=direccion%>">
-            </div>
 			<div>
-			    <label for="">Teléfono</label>
-                <label for="">Correo Electrónico</label>
+            <label for="">NIT</label>
+            <label for="">Nombre Proveedor</label>
+            <label for="">Dirección</label>
             </div>
             <div>
-            	<input type="text" name="tel" value="<%=telefono%>">                    
-                <input type="email" name="email" value="<%=email%>">
-			</div>
-		</div>
+            	<input type="text" name="nit" value="<%=nit%>" <%=estado%>>
+                <input type="hidden" name="ni" value="<%=nit%>">
+                <input type="text" name="nombre" value="<%=nombre%>">
+                <input type="text" name="direccion" value="<%=direccion%>">
+            </div>
+            <div>
+                <label for="">Teléfono</label>
+                <label for="">Ciudad</label>
+            </div>
+            <div>
+                <input type="text" name="tel" value="<%=telefono%>">
+                <input type="text" name="ciudad" value="<%=ciudad%>">
+            </div>
+        </div>
         <div class="contenedorBotones">
         	<input type="submit" name="consultar" value="Consultar">
-            <input type="submit" name="insertar" value="Crear">
+            <input type="submit" name="insertar" value="Crear">                
             <input type="submit" name="actualizar" value="Actualizar">
             <input type="submit" name="eliminar" value="Borrar">
             <input type="submit" name="limpiar" value="Limpiar">
-     	</div>
+    	</div>
 	</form>
-</div>	
+</div>		
 
 <%
 if (request.getParameter("men") != null) {
@@ -81,5 +80,6 @@ if (request.getParameter("men") != null) {
 	out.print("<script>alert('" + mensaje + "');</script>");
 }
 %>
+
 </body>
 </html>

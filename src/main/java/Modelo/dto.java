@@ -2,62 +2,59 @@ package Modelo;
 
 public class dto {
 
-	private int cedula_cliente;
-	private String direccion_cliente;
-	private String email_cliente;
-	private String nombre_cliente;
-	private String telefono_cliente;
-
+	private int cedula;
+	private String email;
+	private String nombre;	
+	private String clave;
+	private String usuario;
 	
-	public dto(int cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
-			String telefono_cliente) {
-		super();
-		this.cedula_cliente = cedula_cliente;
-		this.direccion_cliente = direccion_cliente;
-		this.email_cliente = email_cliente;
-		this.nombre_cliente = nombre_cliente;
-		this.telefono_cliente = telefono_cliente;
+	public dto(int cedula, String email, String nombre, String clave, String usuario) {
+		
+		this.cedula = cedula;
+		this.email = email;
+		this.nombre = nombre;
+		this.clave = clave;
+		this.usuario = usuario;
 	}
 
-	
-	public int getCedula_cliente() {
-		return cedula_cliente;
+	public int getCedula() {
+		return cedula;
 	}
 
-	public void setCedula_cliente(int cedula_cliente) {
-		this.cedula_cliente = cedula_cliente;
+	public void setCedula(int cedula) {
+		this.cedula = cedula;
 	}
 
-	public String getDireccion_cliente() {
-		return direccion_cliente;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setDireccion_cliente(String direccion_cliente) {
-		this.direccion_cliente = direccion_cliente;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getEmail_cliente() {
-		return email_cliente;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setEmail_cliente(String email_cliente) {
-		this.email_cliente = email_cliente;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getNombre_cliente() {
-		return nombre_cliente;
+	public String getClave() {
+		return clave;
 	}
 
-	public void setNombre_cliente(String nombre_cliente) {
-		this.nombre_cliente = nombre_cliente;
+	public void setClave(String clave) {
+		this.clave = clave;
 	}
 
-	public String getTelefono_cliente() {
-		return telefono_cliente;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setTelefono_cliente(String telefono_cliente) {
-		this.telefono_cliente = telefono_cliente;
-	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}	
 
 }

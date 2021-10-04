@@ -4,8 +4,6 @@ import java.sql.PreparedStatement;
 
 import javax.swing.JOptionPane;
 
-import com.mysql.cj.*;
-import com.mysql.cj.protocol.Resultset;
 import java.sql.*;
 
 import Controlador.conexion;
@@ -15,44 +13,85 @@ public class dao {
 	conexion cnn = new conexion();
 	Connection conec = cnn.Conecta();
 	PreparedStatement ps = null;
-	Resultset res = null;
+	ResultSet res = null;
 
-	public boolean lib_insertar(dto lib) {
+	public boolean insertar_Usuario(dto usuario) {
+
+		boolean resul = false;
+		dto UsuarioEx = null;
+
+		try {
+			UsuarioEx = buscar_Usuario(usuario.getCedula());
+			if (UsuarioEx == null) {
+				String sql = "insert into usuarios values(?,?,?,?,?)";
+				ps = conec.prepareStatement(sql);
+				ps.setInt(1, usuario.getCedula());				
+				ps.setString(2, usuario.getEmail());
+				ps.setString(3, usuario.getNombre());
+				ps.setString(4, usuario.getClave());
+				ps.setString(5, usuario.getUsuario());
+				resul = ps.executeUpdate() > 0; 
+			} else {
+				JOptionPane.showMessageDialog(null, "El Usuario ya existe...");
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Error al Registrar al Usuario" + e);
+		}
+		return resul;
+
+	}
+
+	public dto buscar_Usuario(int cedula) {
+
+		dto usu = null;
+
+		try {
+			String sql = "select * from usuarios where cedula_usuario=?";
+			ps = conec.prepareStatement(sql);
+			ps.setInt(1, cedula);
+			res = ps.executeQuery();
+
+			while (res.next()) {
+				usu = new dto(res.getInt(1), res.getString(2), res.getString(3), res.getString(4), res.getString(5));
+			}
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error al consultar" + e);
+		}
+		return usu;
+	}
+	
+	public boolean actualizar_Usuario(dto usuario) {
+
 		boolean resul = false;
 		try {
-			String sql = "insert into clientes values(?,?,?,?,?)";
+			String sql = "update usuarios set email_usuario=?, nombre_usuario=?, password_usuario=?, usuario=? where cedula_usuario=?";
 			ps = conec.prepareStatement(sql);
-			ps.setInt(1, lib.getCedula_cliente());
-			ps.setString(2, lib.getDireccion_cliente());
-			ps.setString(3, lib.getEmail_cliente());
-			ps.setString(4, lib.getNombre_cliente());
-			ps.setString(5, lib.getTelefono_cliente());
-			resul = ps.executeUpdate() > 0;
+			ps.setString(1, usuario.getEmail());
+			ps.setString(2, usuario.getNombre());
+			ps.setString(3, usuario.getClave());
+			ps.setString(4, usuario.getUsuario());
+			ps.setInt(5, usuario.getCedula());
+			resul = ps.executeUpdate() > 0; 
 
-		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "error al insertar clientes" + e);
-
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Error al Actualizar el Usuario" + e);
 		}
 		return resul;
 	}
 
-	public dto lib_buscar(String nombre_cliente) {
+	public boolean eliminar_Usuario(int cedula) {
 
-		dto lib = null;
+		boolean resul = false;
 		try {
-			String sql = "select * from clientes where nombre_cliente=?";
+			String sql = "delete from usuarios where cedula_usuario=?";
 			ps = conec.prepareStatement(sql);
-			ps.setString(4, nombre_cliente);
-			//res = ps.executeQuery();
-			//while (res.next()) {
-			//	lib = new dto(res.getInt(1), res.getString(2);
+			ps.setInt(1, cedula);
+			resul = ps.executeUpdate() > 0;
 
-			//}
-
-		} catch (SQLException ex) {
-			JOptionPane.showMessageDialog(null, "Error al consultar: "+ex);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Error al Eliminar el Usuario" + e);
 		}
-		return lib;
+		return resul;
 	}
 
 }

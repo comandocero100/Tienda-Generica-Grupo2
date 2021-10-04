@@ -39,7 +39,7 @@ public class Clientes extends HttpServlet {
 			nombre = request.getParameter("nombre_cliente");
 			telefono = request.getParameter("telefono_cliente");
 			dto lib = new dto(cedula, direccion, email, nombre, telefono);
-			if (libdao.lib_insertar(lib)) {
+			if (libdao.insertar_Usuario(lib)) {
 
 				//JOptionPane.showMessageDialog(null, "Se registro el cliente");
 				response.sendRedirect("clientes.jsp?men=Se registro el cliente");

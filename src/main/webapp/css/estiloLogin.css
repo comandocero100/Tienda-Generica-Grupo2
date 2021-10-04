@@ -18,6 +18,7 @@ h1 {
 	font-weight: normal;
 }
 
+
 .contenedorGeneral {
 	position: absolute;
 	width: 550px;
@@ -64,6 +65,7 @@ contenedorDatos {
 }
 
 .contenedorBotones input {
+	cursor: pointer;
 	width: 150px;
 	height: 40px;
 	font-family: calibri;
