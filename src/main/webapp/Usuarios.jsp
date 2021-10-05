@@ -12,11 +12,11 @@
 <%!String cedula = "", email = "", nombre = "", clave = "", usuario = "",  estado = "";%>
 
 <%
-if (request.getParameter("cedula") != null) {
-	cedula = request.getParameter("cedula");
-	email = request.getParameter("email");
-	nombre = request.getParameter("nombre");		
-	clave = request.getParameter("clave");
+if (request.getParameter("cedula_usuario") != null) {
+	cedula = request.getParameter("cedula_usuario");
+	email = request.getParameter("email_usuario");
+	nombre = request.getParameter("nombre_usuario");		
+	clave = request.getParameter("password_usuario");
 	usuario = request.getParameter("usuario");
 	if(cedula == "") {
 	estado = "enabled";
@@ -57,7 +57,7 @@ if (request.getParameter("cedula") != null) {
 				<label for="">Correo Electrónico</label>
 			</div>
 			<div>
-				<input type="text" name="cedula" size="12" value="<%=cedula%>" <%=estado%> required>
+				<input type="text" name="cedula" value="<%=cedula%>" <%=estado%> required>
 				<input type="hidden" name="ced" value="<%=cedula%>"> 
 				<input type="text" name="nombre" value="<%=nombre%>"> 
 				<input type="email" name="email" value="<%=email%>">
@@ -73,7 +73,7 @@ if (request.getParameter("cedula") != null) {
 		</div>
 		<div class="contenedorBotones">
 			<input type="submit" name="consultar" value="Consultar">
-			<input type="submit" name="insertar" value="Crear"> 
+			<input type="submit" name="insertar" value="Insertar"> 
 			<input type="submit" name="actualizar" value="Actualizar"> 
 			<input	type="submit" name="eliminar" value="Borrar">
 			<input type="submit" name="limpiar" value="Limpiar">			

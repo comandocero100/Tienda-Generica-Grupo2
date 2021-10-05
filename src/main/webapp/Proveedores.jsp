@@ -11,12 +11,12 @@
 <%!String nit = "", ciudad = "", direccion = "", nombre = "",  telefono = "",  estado = "";%>
 
 <%
-if (request.getParameter("nit") != null) {
-	nit = request.getParameter("nit");
-	ciudad = request.getParameter("ciudad");
-	direccion = request.getParameter("direccion");		
-	nombre = request.getParameter("nombre");		
-	telefono = request.getParameter("tel");		
+if (request.getParameter("nit_proveedor") != null) {
+	nit = request.getParameter("nit_proveedor");
+	ciudad = request.getParameter("ciudad_proveedor");
+	direccion = request.getParameter("direccion_proveedor");		
+	nombre = request.getParameter("nombre_proveedor");		
+	telefono = request.getParameter("telefono_proveedor");		
 	estado = "disabled";
 }
 %>

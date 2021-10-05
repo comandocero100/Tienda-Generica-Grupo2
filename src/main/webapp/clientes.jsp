@@ -12,12 +12,12 @@
 <%!String cedula = "", nombre = "", direccion = "", telefono = "", email = "", estado = "";%>
 
 <%
-if (request.getParameter("cedula") != null) {
-	cedula = request.getParameter("cedula");
-	direccion = request.getParameter("direccion");
-	email = request.getParameter("email");
-	nombre = request.getParameter("nombre");		
-	telefono = request.getParameter("tel");		
+if (request.getParameter("cedula_cliente") != null) {
+	cedula = request.getParameter("cedula_cliente");
+	direccion = request.getParameter("direccion_cliente");
+	email = request.getParameter("email_cliente");
+	nombre = request.getParameter("nombre_cliente");		
+	telefono = request.getParameter("telefono__cliente");		
 	estado = "disabled";
 }
 %>	
