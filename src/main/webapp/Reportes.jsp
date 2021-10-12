@@ -36,7 +36,7 @@
 
 <div class="contenedor-report">
 	<ul>
-			<li><a href="#">LISTADO USUARIOS</a></li>
+			<li><a href="listas/listaUsuarios.jsp">LISTADO USUARIOS</a></li>
 			<li><a href="#">LISTADO CLIENTES</a></li>
 			<li><a href="#">VENTA POR CLIENTE</a></li>
 	</ul>

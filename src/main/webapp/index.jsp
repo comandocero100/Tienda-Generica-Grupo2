@@ -14,6 +14,8 @@
 	rel="stylesheet">
 <!--custom css-->
 <link rel="stylesheet" href="css/estiloMenuPrincipal.css">
+
+<script type="text/javascript" src="js/boton-menu.js"></script>
 </head>
 <body>
 	<div class="entrada-general">

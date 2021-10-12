@@ -31,7 +31,11 @@ body {
 	color: #ffffff;
 }
 
-
+.container-tabla{
+	
+	min-width: 980px;
+	margin: 0 auto;
+}
 
 h1 {
 	width: 1000px;

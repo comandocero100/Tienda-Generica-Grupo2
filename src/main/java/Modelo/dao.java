@@ -93,5 +93,23 @@ public class dao {
 		}
 		return resul;
 	}
+	
+	//Login
+			public boolean login_usuarios(String usuario, String password) {
+				boolean resultado = false;
+				try {
+					String sql = "select * from usuarios where usuario=? and password_usuario=?";
+					ps = conec.prepareStatement(sql);
+					ps.setString(1, usuario);
+					ps.setString(2, password);
+					res = ps.executeQuery();			
+					while(res.next()) {
+						resultado = true;
+					}
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "Error en la consulta de los datos... "+e);
+				}			
+				return resultado;
+			}
 
 }

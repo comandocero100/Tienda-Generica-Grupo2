@@ -2,59 +2,60 @@ package Modelo;
 
 public class proveedorDto {
 
-	private int nit;
-	private String ciudad;
-	private String direccion;
-	private String nombre;
-	private String telefono;
+	private long nit_proveedor;
+	private String ciudad_proveedor;
+	private String direccion_proveedor;
+	private String nombre_proveedor;
+	private String telefono_proveedor;
 
-	public proveedorDto(int nit, String ciudad, String direccion, String nombre, String telefono) {
+	public proveedorDto(long nit_proveedor, String ciudad_proveedor, String direccion_proveedor,
+			String nombre_proveedor, String telefono_proveedor) {
 		super();
-		this.nit = nit;
-		this.ciudad = ciudad;
-		this.direccion = direccion;
-		this.nombre = nombre;
-		this.telefono = telefono;
+		this.nit_proveedor = nit_proveedor;
+		this.ciudad_proveedor = ciudad_proveedor;
+		this.direccion_proveedor = direccion_proveedor;
+		this.nombre_proveedor = nombre_proveedor;
+		this.telefono_proveedor = telefono_proveedor;
 	}
 
-	public int getNit() {
-		return nit;
+	public long getNit_proveedor() {
+		return nit_proveedor;
 	}
 
-	public void setNit(int nit) {
-		this.nit = nit;
+	public void setNit_proveedor(long nit_proveedor) {
+		this.nit_proveedor = nit_proveedor;
 	}
 
-	public String getCiudad() {
-		return ciudad;
+	public String getCiudad_proveedor() {
+		return ciudad_proveedor;
 	}
 
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
+	public void setCiudad_proveedor(String ciudad_proveedor) {
+		this.ciudad_proveedor = ciudad_proveedor;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public String getDireccion_proveedor() {
+		return direccion_proveedor;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDireccion_proveedor(String direccion_proveedor) {
+		this.direccion_proveedor = direccion_proveedor;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombre_proveedor() {
+		return nombre_proveedor;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre_proveedor(String nombre_proveedor) {
+		this.nombre_proveedor = nombre_proveedor;
 	}
 
-	public String getTelefono() {
-		return telefono;
+	public String getTelefono_proveedor() {
+		return telefono_proveedor;
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public void setTelefono_proveedor(String telefono_proveedor) {
+		this.telefono_proveedor = telefono_proveedor;
 	}
 
 }

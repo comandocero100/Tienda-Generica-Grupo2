@@ -6,6 +6,11 @@
 <meta charset="ISO-8859-1">
 <title>Usuarios</title>
 <link rel="stylesheet" href="css/estiloOpciones.css">
+<link href="//datatables.net/download/build/nightly/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+  
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="//datatables.net/download/build/nightly/jquery.dataTables.js"></script>
+
 </head>
 <body>
 
@@ -48,7 +53,7 @@ if (request.getParameter("cedula_usuario") != null) {
 
 	<form action="Usuarios" method="post">
 		<div class="titulo-usuario">
-			<h3>Usuario:</h3>
+			<h3>Usuario: </h3>
 		</div>
 		<div class="contenedorIN">
 			<div>
@@ -57,18 +62,18 @@ if (request.getParameter("cedula_usuario") != null) {
 				<label for="">Correo Electrónico</label>
 			</div>
 			<div>
-				<input type="text" name="cedula" value="<%=cedula%>" <%=estado%> required>
-				<input type="hidden" name="ced" value="<%=cedula%>"> 
-				<input type="text" name="nombre" value="<%=nombre%>"> 
-				<input type="email" name="email" value="<%=email%>">
+				<input type="text" name="cedula" value="<%=cedula%>" <%=estado%> required placeholder="ingrese documento">
+				<input type="hidden" name="ced" value="<%=cedula%>" placeholder="ingrese documento"> 
+				<input type="text" name="nombre" value="<%=nombre%>" placeholder="ingrese nombre completo"> 
+				<input type="email" name="email" value="<%=email%>" placeholder="ingrese email">
 			</div>
 			<div>
 				<label for="">Usuario</label> 
 				<label for="">Contraseña</label>
 			</div>
 			<div>
-				<input type="text" name="usuario" value="<%=usuario%>"> 
-				<input type="password" name="clave" value="<%=clave%>">
+				<input type="text" name="usuario" value="<%=usuario%>" placeholder="ingrese un nombre usuario"> 
+				<input type="password" name="clave" value="<%=clave%>" placeholder="ingrese contraseña usuario">
 			</div>
 		</div>
 		<div class="contenedorBotones">
@@ -80,16 +85,68 @@ if (request.getParameter("cedula_usuario") != null) {
 		</div>
 	</form>
 </div>
-<footer class="footer">
+<footer >
+<div class="container-tabla">
+			<table id="example" class="display">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
 
+				<tfoot>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</tfoot>
+			</table>
+          
+			<table id="second" class="display">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
 
+				<tfoot>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</tfoot>
+			</table>          
+		</div>
 </footer>
+
+
 <%
 if (request.getParameter("men") != null) {
 	String mensaje = request.getParameter("men");
 	out.print("<script>alert('" + mensaje + "');</script>");
 }
 %>
+<script src="scripts/users-table copy.js" ></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+    
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="Titulo-admin">
-		<h1>Tienda Genérica (prueba)</h1>
+		<h1>Tienda Genérica</h1>
 	</div>
 	<header>
 	<form action="" method="post" class="lista-admin">

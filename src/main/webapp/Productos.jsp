@@ -35,7 +35,7 @@
 		</div>
         <div class="contenedorIN">
         	<div><label>Buscar archivo: </label><hr>
-        	<input type="file" value="Examinar" name="archivo" accept=".txt"></div>                               
+        	<input type="file" value="Examinar" name="archivo" accept=".csv"></div>                               
         </div>
         <div class="contenedorBotones">              	
         	<div><input type="submit" value="Cargar" name="cargar"></div>           	
