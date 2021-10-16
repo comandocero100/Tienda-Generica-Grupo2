@@ -1,13 +1,13 @@
 package Modelo;
 
 public class clientesDto {
-	private int cedula_cliente;
+	private long cedula_cliente;
 	private String direccion_cliente;
 	private String email_cliente;
 	private String nombre_cliente;
 	private String telefono_cliente;
 
-	public clientesDto(int cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
+	public clientesDto(long cedula_cliente, String direccion_cliente, String email_cliente, String nombre_cliente,
 			String telefono_cliente) {
 		super();
 		this.cedula_cliente = cedula_cliente;
@@ -17,11 +17,11 @@ public class clientesDto {
 		this.telefono_cliente = telefono_cliente;
 	}
 
-	public int getCedula_cliente() {
+	public long getCedula_cliente() {
 		return cedula_cliente;
 	}
 
-	public void setCedula_cliente(int cedula_cliente) {
+	public void setCedula_cliente(long cedula_cliente) {
 		this.cedula_cliente = cedula_cliente;
 	}
 

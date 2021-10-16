@@ -2,13 +2,13 @@ package Modelo;
 
 public class dto {
 
-	private int cedula;
+	private long cedula;
 	private String email;
 	private String nombre;	
 	private String clave;
 	private String usuario;
 	
-	public dto(int cedula, String email, String nombre, String clave, String usuario) {
+	public dto(long cedula, String email, String nombre, String clave, String usuario) {
 		
 		this.cedula = cedula;
 		this.email = email;
@@ -17,7 +17,7 @@ public class dto {
 		this.usuario = usuario;
 	}
 
-	public int getCedula() {
+	public long getCedula() {
 		return cedula;
 	}
 

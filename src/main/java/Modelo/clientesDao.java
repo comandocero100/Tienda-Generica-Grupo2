@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -27,7 +28,7 @@ public class clientesDao {
 			if (UsuarioEx == null) {
 				String sql = "insert into clientes values(?,?,?,?,?)";
 				ps = conec.prepareStatement(sql);
-				ps.setInt(1, cliente.getCedula_cliente());				
+				ps.setLong(1, cliente.getCedula_cliente());				
 				ps.setString(2, cliente.getDireccion_cliente());
 				ps.setString(3, cliente.getEmail_cliente());
 				ps.setString(4, cliente.getNombre_cliente());
@@ -43,14 +44,14 @@ public class clientesDao {
 
 	}
 
-	public clientesDto buscar_Cliente(int cedula) {
+	public clientesDto buscar_Cliente(long cedula) {
 
 		clientesDto usu = null;
 
 		try {
 			String sql = "select * from clientes where cedula_cliente=?";
 			ps = conec.prepareStatement(sql);
-			ps.setInt(1, cedula);
+			ps.setLong(1, cedula);
 			res = ps.executeQuery();
 
 			while (res.next()) {
@@ -68,7 +69,7 @@ public class clientesDao {
 		try {
 			String sql = "update clientes set direccion_cliente=?, email_cliente=?, nombre_cliente=?,  telefono_cliente=? where cedula_cliente=?";
 			ps = conec.prepareStatement(sql);
-			ps.setInt(1, cliente.getCedula_cliente());
+			ps.setLong(1, cliente.getCedula_cliente());
 			ps.setString(2, cliente.getDireccion_cliente());
 			ps.setString(3, cliente.getEmail_cliente());
 			ps.setString(4, cliente.getNombre_cliente());
@@ -94,6 +95,23 @@ public class clientesDao {
 			JOptionPane.showMessageDialog(null, "Error al Eliminar el cliente" + e);
 		}
 		return resul;
+	}
+	
+	public ArrayList<clientesDto> listarClientes(){
+		clientesDto cDTO = null;
+		ArrayList<clientesDto> lista = new ArrayList<>();
+		try {
+			String seleccionar = "SELECT * FROM clientes";
+			ps = conec.prepareStatement(seleccionar);
+			res = ps.executeQuery();
+			while(res.next()) {
+				cDTO = new clientesDto(res.getLong(1), res.getString(2), res.getString(3), res.getString(4), res.getString(5));
+				lista.add(cDTO);
+			}
+		} catch (SQLException sqle) {
+			JOptionPane.showMessageDialog(null, "Error al listar los clientes en dao. "+sqle);
+		}
+		return lista;
 	}
 
 }

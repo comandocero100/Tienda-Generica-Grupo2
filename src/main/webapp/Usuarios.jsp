@@ -6,10 +6,6 @@
 <meta charset="ISO-8859-1">
 <title>Usuarios</title>
 <link rel="stylesheet" href="css/estiloOpciones.css">
-<link href="//datatables.net/download/build/nightly/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-  
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="//datatables.net/download/build/nightly/jquery.dataTables.js"></script>
 
 </head>
 <body>
@@ -86,55 +82,7 @@ if (request.getParameter("cedula_usuario") != null) {
 	</form>
 </div>
 <footer >
-<div class="container-tabla">
-			<table id="example" class="display">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Position</th>
-						<th>Office</th>
-						<th>Extn</th>
-						<th>Start date</th>
-						<th>Salary</th>
-					</tr>
-				</thead>
 
-				<tfoot>
-					<tr>
-						<th>Name</th>
-						<th>Position</th>
-						<th>Office</th>
-						<th>Extn</th>
-						<th>Start date</th>
-						<th>Salary</th>
-					</tr>
-				</tfoot>
-			</table>
-          
-			<table id="second" class="display">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Position</th>
-						<th>Office</th>
-						<th>Extn</th>
-						<th>Start date</th>
-						<th>Salary</th>
-					</tr>
-				</thead>
-
-				<tfoot>
-					<tr>
-						<th>Name</th>
-						<th>Position</th>
-						<th>Office</th>
-						<th>Extn</th>
-						<th>Start date</th>
-						<th>Salary</th>
-					</tr>
-				</tfoot>
-			</table>          
-		</div>
 </footer>
 
 
@@ -144,8 +92,7 @@ if (request.getParameter("men") != null) {
 	out.print("<script>alert('" + mensaje + "');</script>");
 }
 %>
-<script src="scripts/users-table copy.js" ></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
     
 
 </body>

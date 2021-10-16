@@ -17,7 +17,12 @@ if (request.getParameter("nit_proveedor") != null) {
 	direccion = request.getParameter("direccion_proveedor");		
 	nombre = request.getParameter("nombre_proveedor");		
 	telefono = request.getParameter("telefono_proveedor");		
-	estado = "disabled";
+	if(nit == "") {
+		estado = "enabled";
+	}
+	else{
+		estado = "disabled";
+	}
 }
 %>
 
@@ -50,18 +55,18 @@ if (request.getParameter("nit_proveedor") != null) {
             <label for="">Dirección</label>
             </div>
             <div>
-            	<input type="text" name="nit" value="<%=nit%>" <%=estado%>>
-                <input type="hidden" name="ni" value="<%=nit%>">
-                <input type="text" name="nombre" value="<%=nombre%>">
-                <input type="text" name="direccion" value="<%=direccion%>">
+            	<input type="text" name="nit" value="<%=nit%>" <%=estado%> placeholder="ingrese nit proveedor">
+                <input type="hidden" name="ni" value="<%=nit%>" placeholder="ingrese nit">
+                <input type="text" name="nombre" value="<%=nombre%>" placeholder="ingrese nombre proveedor">
+                <input type="text" name="direccion" value="<%=direccion%>" placeholder="ingrese direccion proveedor">
             </div>
             <div>
                 <label for="">Teléfono</label>
                 <label for="">Ciudad</label>
             </div>
             <div>
-                <input type="text" name="tel" value="<%=telefono%>">
-                <input type="text" name="ciudad" value="<%=ciudad%>">
+                <input type="text" name="tel" value="<%=telefono%>" placeholder="ingrese telefono proveedor">
+                <input type="text" name="ciudad" value="<%=ciudad%>" placeholder="ingrese ciudad">
             </div>
         </div>
         <div class="contenedorBotones">

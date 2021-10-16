@@ -44,7 +44,7 @@ public class Usuarios extends HttpServlet {
 		}
 		
 		if (request.getParameter("consultar") != null) {			
-			int cedula = Integer.parseInt(request.getParameter("cedula"));						
+			long cedula = Integer.parseInt(request.getParameter("cedula"));						
 			dto usua = usu.buscar_Usuario(cedula);
 			
 			if (usua != null) {				

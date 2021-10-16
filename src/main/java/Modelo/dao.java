@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -25,7 +26,7 @@ public class dao {
 			if (UsuarioEx == null) {
 				String sql = "insert into usuarios values(?,?,?,?,?)";
 				ps = conec.prepareStatement(sql);
-				ps.setInt(1, usuario.getCedula());				
+				ps.setLong(1, usuario.getCedula());				
 				ps.setString(2, usuario.getEmail());
 				ps.setString(3, usuario.getNombre());
 				ps.setString(4, usuario.getClave());
@@ -41,14 +42,14 @@ public class dao {
 
 	}
 
-	public dto buscar_Usuario(int cedula) {
+	public dto buscar_Usuario(long l) {
 
 		dto usu = null;
 
 		try {
 			String sql = "select * from usuarios where cedula_usuario=?";
 			ps = conec.prepareStatement(sql);
-			ps.setInt(1, cedula);
+			ps.setLong(1, l);
 			res = ps.executeQuery();
 
 			while (res.next()) {
@@ -70,7 +71,7 @@ public class dao {
 			ps.setString(2, usuario.getNombre());
 			ps.setString(3, usuario.getClave());
 			ps.setString(4, usuario.getUsuario());
-			ps.setInt(5, usuario.getCedula());
+			ps.setLong(5, usuario.getCedula());
 			resul = ps.executeUpdate() > 0; 
 
 		} catch (Exception e) {
@@ -111,5 +112,21 @@ public class dao {
 				}			
 				return resultado;
 			}
-
+			
+			public ArrayList<dto> listarUsuarios(){
+				dto uDTO = null;
+				ArrayList<dto> lista = new ArrayList<>();
+				try {
+					String seleccionar = "SELECT * FROM usuarios";
+					ps = conec.prepareStatement(seleccionar);
+					res = ps.executeQuery();
+					while(res.next()) {
+						uDTO = new dto(res.getLong(1), res.getString(2), res.getString(3), res.getString(4), res.getString(5));
+						lista.add(uDTO);
+					}
+				} catch (SQLException sqle) {
+					JOptionPane.showMessageDialog(null, "Error al listar los usuarios en dao. "+sqle);
+				}
+				return lista;
+			}	
 }
