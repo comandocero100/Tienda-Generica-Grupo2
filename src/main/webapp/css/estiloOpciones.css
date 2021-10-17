@@ -112,6 +112,98 @@ nav ul li a:hover {
 	margin-bottom: 15px;
 }
 
+.contenedorIN2 {
+	float: left;
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+	margin: 50px auto 0 auto;
+}
+
+.contenedorIN2 label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.contenedorIN2 input {
+	display: block;
+	font-size: 20px;
+	width: 260px;
+	margin-bottom: 15px;
+}
+
+.contenedor-fluid-2 {
+	border-top: solid gray 1px;
+	background-color: indigo;
+}
+
+.contenedorIN3 {
+	float: left;
+	display: flex;
+	justify-content: space-between;
+	width: 250px;
+	margin: 50px auto 0 auto;
+}
+
+.contenedorIN3 label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.contenedorIN3 input {
+	display: block;
+	font-size: 20px;
+	width: 260px;
+	margin-bottom: 15px;
+}
+.contenedorIN4 {
+	
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+	margin: 50px auto 0 auto;
+}
+
+.contenedorIN4 label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.contenedorIN4 input {
+	display: block;
+	font-size: 20px;
+	width: 160px;
+	margin-bottom: 15px;
+}
+
+.left{
+	
+	padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 57px;
+    float: left;
+    position: relative;
+    width: 45%;
+    border: steelblue solid 1px;
+    height: auto;
+
+}
+
+
+.boton-cedula{
+	
+	margin: auto;
+	width: 850px;
+	display: flex;
+	justify-content: center;
+}
+
 .contenedorBotones {
 	
 	margin: auto;
@@ -119,6 +211,7 @@ nav ul li a:hover {
 	display: flex;
 	justify-content: center;
 }
+
 
 .contenedorBotones input {
 	cursor:pointer; 
