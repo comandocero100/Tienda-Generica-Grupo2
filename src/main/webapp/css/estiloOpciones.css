@@ -91,6 +91,75 @@ nav ul li a:hover {
 	background-color: indigo;
 }
 
+.cliente {
+	display: flex;
+	justify-content: space-between;
+	width: 850px;
+	margin: 50px auto 0 auto;
+	
+}
+.cliente label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.cliente input {
+	display: block;
+	font-size: 20px;
+	width: 460px;
+	margin-bottom: 15px;
+}
+
+.productosGrande {
+	
+	display: flex;
+	justify-content: space-between;
+	
+	margin: 20px 0 20px 50px;
+	
+}
+.productosGrande label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.productosGrande input {
+	display: block;
+	font-size: 20px;
+	width: 260px;
+	margin-bottom: 15px;
+}
+
+.individuales{
+	
+	margin: 10px;
+}
+
+.precios {
+	
+	justify-content: space-between;
+	width: 350px;
+	margin: 50px auto 0 auto;
+	
+}
+.precios label {
+	display: block;
+	color: #000000;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.precios input {
+	display: block;
+	font-size: 20px;
+	width: 460px;
+	margin-bottom: 15px;
+}
+
 .contenedorIN {
 	display: flex;
 	justify-content: space-between;
@@ -182,18 +251,6 @@ nav ul li a:hover {
 	margin-bottom: 15px;
 }
 
-.left{
-	
-	padding-left: 10px;
-    padding-top: 10px;
-    margin-left: 57px;
-    float: left;
-    position: relative;
-    width: 45%;
-    border: steelblue solid 1px;
-    height: auto;
-
-}
 
 
 .boton-cedula{
@@ -212,6 +269,79 @@ nav ul li a:hover {
 	justify-content: center;
 }
 
+.btn-cliente{
+	margin: auto;
+	width: 150px;
+	display: flex;
+}
+.btn-cliente input {
+	cursor:pointer; 
+	width: 100px;
+	height: 40px;
+	font-family: calibri;
+	font-size: 20px;
+	background-color: #212369;
+	color: white;
+	border-radius: 5px;
+	margin: 0px 5px 2px 5px;
+	border: none;
+}
+
+.btn-cliente input:hover {
+	cursor:pointer; 
+	background-color: #383cb4;
+	color: #c0c0c0;
+}
+
+.btn-productosGrande{
+	margin: auto;
+	width: 150px;
+	display: flex;
+}
+.btn-productosGrande input {
+	cursor:pointer; 
+	width: 100px;
+	height: 40px;
+	font-family: calibri;
+	font-size: 20px;
+	background-color: #212369;
+	color: white;
+	border-radius: 5px;
+	margin: 10px 10px 0 10px;
+	border: none;
+}
+
+.btn-productosGrande input:hover {
+	cursor:pointer; 
+	background-color: #383cb4;
+	color: #c0c0c0;
+}
+
+
+.btn-precios{
+	
+	margin: auto;
+	width: 850px;
+	display: flex;
+}
+.btn-precios input {
+	cursor:pointer; 
+	width: 150px;
+	height: 40px;
+	font-family: calibri;
+	font-size: 20px;
+	background-color: #212369;
+	color: white;
+	border-radius: 5px;
+	margin: 40px 10px 0 10px;
+	border: none;
+}
+
+.btn-precios input:hover {
+	cursor:pointer; 
+	background-color: #383cb4;
+	color: #c0c0c0;
+}
 
 .contenedorBotones input {
 	cursor:pointer; 

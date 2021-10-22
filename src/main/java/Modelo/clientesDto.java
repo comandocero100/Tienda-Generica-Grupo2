@@ -16,7 +16,14 @@ public class clientesDto {
 		this.nombre_cliente = nombre_cliente;
 		this.telefono_cliente = telefono_cliente;
 	}
+	
+	public clientesDto(long cedula_cliente, String nombre_cliente) {
+		super();
+		this.cedula_cliente = cedula_cliente;
+		this.nombre_cliente = nombre_cliente;
+	}
 
+	
 	public long getCedula_cliente() {
 		return cedula_cliente;
 	}

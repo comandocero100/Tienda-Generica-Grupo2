@@ -26,6 +26,15 @@ public class ventasDTO {
 		this.totalVenta = totalVenta;
 		this.valorVenta = valorVenta;
 	}
+	
+	
+	public ventasDTO(long cedulaCliente, double ivaVenta, double totalVenta, double valorVenta) {
+		super();
+		this.cedulaCliente = cedulaCliente;
+		this.ivaVenta = ivaVenta;
+		this.totalVenta = totalVenta;
+		this.valorVenta = valorVenta;
+	}
 	public long getCodigoVenta() {
 		return codigoVenta;
 	}

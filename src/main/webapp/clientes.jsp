@@ -83,12 +83,11 @@
 	</div>
 
 	<%
-	if (request.getParameter("men") != null) {
-		String mensaje = request.getParameter("men");
-		out.print("<script>alert('" + mensaje + "');</script>");
-	}
-	
-	%>
+if (request.getParameter("men") != null) {
+	String mensaje = request.getParameter("men");
+	out.print("<script>alert('" + mensaje + "');</script>");
+}
+%>
 	
 </body>
 </html>

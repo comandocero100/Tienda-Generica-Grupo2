@@ -18,6 +18,22 @@ public class productosDTO {
 		this.precioCompra = precioCompra;
 		this.precioVenta = precioVenta;
 	}
+	
+	public productosDTO(long codigoProducto, String nombreProducto, double precioVenta) {
+		
+		this.codigoProducto = codigoProducto;
+		this.nombreProducto = nombreProducto;
+		this.precioVenta = precioVenta;
+	}
+	
+	public productosDTO(long codigoProducto, double ivaCompra, String nombreProducto, double precioVenta) {
+		
+		this.codigoProducto = codigoProducto;
+		this.ivaCompra = ivaCompra;
+		this.nombreProducto = nombreProducto;
+		this.precioVenta = precioVenta;
+	}
+	
 	public long getCodigoProducto() {
 		return codigoProducto;
 	}
